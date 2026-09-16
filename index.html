@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Launcher</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🌙 <span id="site-name">Game Launcher</span></div>
+    <span id="streak-pill" class="streak-pill hidden" title="Daily streak">🔥 <span id="streak-n">0</span></span>
+    <input id="search" type="text" placeholder="Search games..." autocomplete="off" />
+    <button id="random-btn" class="icon-btn" title="Random game">🎲</button>
+    <a href="stats.html" class="icon-btn" title="Your stats">📊</a>
+    <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+  </header>
+
+  <p id="greeting" class="greeting"></p>
+  <nav id="chips" class="chips"></nav>
+
+  <section id="recent-section" class="section hidden">
+    <h2 class="section-title">Recently played</h2>
+    <div id="recent" class="hscroll"></div>
+  </section>
+
+  <section id="fav-section" class="section hidden">
+    <h2 class="section-title">Favorites</h2>
+    <div id="favs" class="grid"></div>
+  </section>
+
+  <section id="featured-section" class="section hidden">
+    <h2 class="section-title">New &amp; featured</h2>
+    <div id="featured" class="grid featured-grid"></div>
+  </section>
+
+  <section class="section" id="all-section">
+    <h2 class="section-title">All games</h2>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="hidden">No games found.</p>
+  </section>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Settings</h2>
+      <p class="muted">Adjust the launcher. Reopen any time with the gear.</p>
+
+      <h3>Nickname</h3>
+      <input id="nickname-input" type="text" placeholder="What should we call you?" maxlength="20" />
+
+      <h3>Accent</h3>
+      <div id="accents" class="accents"></div>
+
+      <div class="setting-row">
+        <div><strong>Open games in a blank tab</strong><p class="muted">Cloak: launches into an about:blank tab.</p></div>
+        <label class="switch"><input id="cloak-toggle" type="checkbox"><span></span></label>
+      </div>
+      <div class="setting-row">
+        <div><strong>Ambient effects</strong><p class="muted">Moon glow &amp; twinkling stars.</p></div>
+        <label class="switch"><input id="ambient-toggle" type="checkbox" checked><span></span></label>
+      </div>
+      <div class="setting-row">
+        <div><strong>UI sounds</strong><p class="muted">Little clicks when you press things.</p></div>
+        <label class="switch"><input id="sounds-toggle" type="checkbox"><span></span></label>
+      </div>
+
+      <button id="save-btn" class="btn primary">Save</button>
+      <button id="close-btn" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

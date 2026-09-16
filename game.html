@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="player-body">
+  <header class="player-bar">
+    <div class="player-title">
+      <strong id="game-title">Loading...</strong> <span id="game-dev" class="muted"></span>
+      <span id="time-pill" class="time-pill" title="Your total playtime on this game">⏱ 0s</span>
+    </div>
+    <div class="player-actions">
+      <button id="mute-btn" class="btn small" title="Mute (best effort)">🔊</button>
+      <button id="fullscreen-btn" class="btn small" title="Fullscreen (F)">Fullscreen</button>
+      <button id="newtab-btn" class="btn small">New tab</button>
+      <button id="close-btn" class="btn small danger" title="Back home (Esc)">✕ Close</button>
+    </div>
+  </header>
+  <iframe id="frame" class="game-frame" allowfullscreen></iframe>
+  <script src="js/common.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
